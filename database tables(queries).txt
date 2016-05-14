@@ -1,0 +1,69 @@
+1. Database table:
+create database `exam`
+
+
+username = exam
+host = localhost
+password = meenu
+
+2. Table for user levels:
+create table `user_level`( id int(11) NOT NULL AUTO_INCREMENT, name varchar(255), PRIMARY KEY(id));
+insert into `user_level`(`id`,`name`) values('1','Admin');
+insert into `user_level`(`id`,`name`) values('2','Member');
+insert into `user_level`(`id`,`name`) values('3','Faculty');
+
+
+3. Table for users registration and login:
+create table `users`(
+    id int(11) NOT NULL AUTO_INCREMENT,
+    username varchar(255),
+    password varchar(255),
+    email varchar(255),
+    user_level int(11),
+    type varchar(255),
+    PRIMARY KEY(id));
+
+
+
+4. Table for exam types:
+create table `tests`(
+    id int(11) NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    description text,
+    number int(11),
+    pass int(11),
+    PRIMARY KEY(id));
+
+
+
+
+5. Table for questions:
+create table `questions`(
+    id int(11) NOT NULL AUTO_INCREMENT,
+    ques_id int(11),
+    question text,
+    one varchar(255),
+    two varchar(255),
+    three varchar(255),
+    four varchar(255),
+    correct int(11),
+    examname varchar(255),
+    exam_id int(11),
+    PRIMARY KEY(id));
+
+
+
+
+
+6. Table for scores(results):
+create table `scores`(
+    id int(11) NOT NULL AUTO_INCREMENT,
+    username varchar(255),
+    points int(11),
+    percentage varchar(255),
+    date_time datetime,
+    examname varchar(255),
+    exam_id int(11),
+    result varchar(255),
+    u_id int(11),
+    PRIMARY KEY(id));
