@@ -4,6 +4,4 @@ multiple choice quesitons
 timer should be set
 
 software requirements:
-MySQL
-PHP
-XAMPP
+XAMPP(MySQL, PHP)
